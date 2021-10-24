@@ -1,0 +1,102 @@
+html {
+	scroll-behavior: smooth;
+}
+body {
+	background-color: #F8F8FF;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	font-weight: 500;
+	font-size: 12px;
+}
+.container{
+	background-color: #ffffff;
+	margin-top: 5vh;
+	max-width: fit-content;
+	border-radius: 30px;
+}
+.main-container{
+	display: flex;
+	flex-direction: column;
+}
+.form-container{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+.form-type{
+	width: 100%;
+	margin-top: 1vh;
+	display: flex;
+	flex-direction: row;
+}
+.attribute-name{
+	flex-basis: 50%;
+}
+.attribute-boundaries{
+	flex-basis: 50%;
+	display: flex;
+	flex-direction: row;
+}
+#submit{
+	max-width: fit-content;
+}
+.greeding{
+	font-size: 24px;
+	color:#706b6b;
+}
+.btn-download{
+	background: #27AE60;
+	border: 1px solid #27AE60;
+	border-radius: 10px;
+	font-family: 'Roboto', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 21px;
+	text-align: center;
+	color: #FFFFFF;
+	width: 120px;
+	outline: none;
+	padding: 10px 10px;
+	transition: .3s;
+	cursor: pointer;
+}
+input[type='number']{
+	width: 80px;
+}
+.main-container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 350px;
+}
+.attribute-div{
+	margin-top: 2vh;
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+.attribute-div-flex{
+	margin-top: 2vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 100%;
+}
+.name{
+	flex-basis: 50%;
+}
+.value{
+	flex-basis: 50%;
+	width: 80px;
+}
+input[type='number']{
+	width: 80px;
+}
+.add-yacht-label{
+	font-size: 25px;
+}
+.full-photo{
+	max-width: 300px;
+}

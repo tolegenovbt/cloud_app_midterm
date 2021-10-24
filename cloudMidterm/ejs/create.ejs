@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head'); %>
+    <link href="/static/css/main.css" rel="stylesheet" type="text/css">
+</head>
+<body style="background-color:  #F8F8FF ">
+    <center>
+        <div class="container shadow-lg p-3 mb-5 bg-white rounded">
+            <div class="main-container">
+            <center><label class="add-yacht-label">Add new Yacht</label></center>
+            <form action="create" method="post" class = "form-container" enctype="multipart/form-data">
+                <div class=main-container>
+                    <div class="attribute-div">
+                        <label class="name">Name:</label>
+                        <input type="text" name="name"/>
+                    </div>
+                    <div class="attribute-div">
+                        <label class="name">Full Length meters:</label>
+                        <input type="number" class="value" name="lengthFull"/>
+                    </div>
+                    <div class="attribute-div">
+                        <label class="name">Length From Waterline meters:</label>
+                        <input type="number" class="value" name="lengthFromWaterline"/>
+                    </div>
+                    <div class="attribute-div">
+                        <label class="name">Width meters:</label>
+                        <input type="number" class="value" name="width"/>
+                    </div>
+                    <div class="attribute-div">
+                        <label class="name">Precipitation:</label>
+                        <input type="number" class="value" name="precipitation"/>
+                    </div>
+                    <div class="attribute-div">
+                        <label class="name">Water Displacement liters:</label>
+                        <input type="number" class="value" name="waterDisplacement"/>
+                    </div>
+                    <div class="attribute-div">
+                        <label class="name">Engine Power kW:</label>
+                        <input type="number" class="value" name="engine"/>
+                    </div>
+                    <div class="attribute-div">
+                        <label class="name">Sleeping Places:</label>
+                        <input type="number" class="value" name="sleepingPlaces"/>
+                    </div>
+                    <div class="attribute-div">
+                        <label class="name">Water Tank Volume liters:</label>
+                        <input type="number" class="value" name="waterTankVolume"/>
+                    </div>
+                    <div class="attribute-div">
+                        <label class="name">Topal sailing area square meters:</label>
+                        <input type="number" class="value" name="totalSailingArea"/>
+                    </div>
+                    <div class="attribute-div">
+                        <label class="name">Genoa:</label>
+                        <input type="number" class="value" name="genoa"/>
+                    </div>
+                    <div class="attribute-div">
+                        <label class="name">Front Photo</label>
+                        <input type="file" name="frontPhoto"/>
+                    </div>
+                    <div class="attribute-div">
+                        <label class="name">Side Photo</label>
+                        <input type="file" name="sidePhoto"/>
+                    </div>
+                
+                    <input type="submit" value="Add" id="submit" class="form-type btn-download">
+                </div>
+            </form> 
+            </div>
+        </div>
+        </center>  
+        <script>
+        </script>  
+</body>
+</html>

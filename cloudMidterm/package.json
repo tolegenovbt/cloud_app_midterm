@@ -1,0 +1,22 @@
+{
+  "name": "cloudmidterm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tolegenov Bekzat",
+  "license": "ISC",
+  "dependencies": {
+    "@azure/cosmos": "^3.14.1",
+    "@azure/storage-blob": "^12.8.0",
+    "dotenv-safe": "^8.2.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-validator": "^6.13.0",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.3",
+    "uuid": "^8.3.2"
+  }
+}

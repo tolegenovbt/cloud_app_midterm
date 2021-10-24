@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head'); %>
+    <link href="/static/css/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <center>
+    <div class="container shadow-lg p-3 mb-5 bg-white rounded">
+        <div class="main-container">
+            <label class="name">Name: <%= item.name %> </label>
+            <label class="name">Full Length: <%= item.lengthFull %> meters</label>
+            <label class="name">Length From Waterline: <%= item.lengthFromWaterline %> meters</label>
+            <label class="name">Width: <%= item.width %> meters</label>
+            <label class="name">Precipitation: <%= item.precipitation %></label>
+            <label class="name">Water Displacement: <%= item.waterDisplacement %> liters</label>
+            <label class="name">Engine Power: <%= item.engine %> kW</label>
+            <label class="name">Sleeping Places: <%= item.sleepingPlaces %></label>
+            <label class="name">Water Tank Volume: <%= item.waterTankVolume %> liters</label>
+            <label class="name">Topal sailing area: <%= item.totalSailingArea %> square meters</label>
+            <label class="name">Genoa: <%= item.genoa %></label>
+            <div class="images">
+                <img class="full-photo" src="<%= item.frontPhoto %>">
+                <img class="full-photo" src="<%= item.sidePhoto %>">
+            </div>
+        </div>
+    </div>
+    </center>
+</body>
+
+</html>

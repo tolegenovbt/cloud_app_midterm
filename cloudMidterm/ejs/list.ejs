@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head'); %>
+    <link href="/static/css/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <center>
+    <div class="container shadow-lg p-3 mb-5 bg-white rounded">
+        <div class="main-container">
+        <form action="list" method="post" class = "form-container">
+            <div class="lengthFull-div form-type">
+                <label class="attribute-name">Full length</label>
+                <div class="attribute-boundaries">
+                    <input id="lengthFullMin" type="number" min="0" name="lengthFullMin">
+                    <label class="to-label">to</label>
+                    <input id="lengthFullMax" type="number" min="0" name="lengthFullMax">
+                </div>
+                
+            </div>
+            <div class="lengthFromWaterline-div form-type">
+                <label class="attribute-name">Lenght On Waterline</label>
+                <div class="attribute-boundaries">
+                    <input id="lengthFromWaterlineMin" type="number" min="0" name="lengthFromWaterlineMin">
+                    <label class="to-label">to</label>
+                    <input id="lengthFromWaterlineMax" type="number" min="0" name="lengthFromWaterlineMax">
+                </div>
+                
+            </div>
+            <div class="width-div form-type">
+                <label class="attribute-name">Width</label>
+                <div class="attribute-boundaries">
+                    <input id="widthMin" type="number" min="0" name="widthMin">
+                    <label class="to-label">to</label>
+                    <input id="widthMax" type="number" min="0" name="widthMax">
+                </div>
+            </div>
+            <div class="precipitation-div form-type">
+                <label class="attribute-name">Precipitation</label>
+                <div class="attribute-boundaries">
+                    <input id="precipitationMin" type="number" min="0" name="precipitationMin">
+                    <label class="to-label">to</label>
+                    <input id="precipitationMax" type="number" min="0" name="precipitationMax">
+                </div>
+            </div>
+            <div class="waterDisplacement-div form-type">
+                <label class="attribute-name">Water Displacement</label>
+                <div class="attribute-boundaries">
+                    <input id="waterDisplacementMin" type="number" min="0" name="waterDisplacementMin">
+                    <label class="to-label">to</label>
+                    <input id="waterDisplacementMax" type="number" min="0" name="waterDisplacementMax">
+                </div>
+            </div>
+            <div class="engine-div form-type">
+                <label class="attribute-name">Engine Power</label>
+                <div class="attribute-boundaries">
+                    <input id="engineMin" type="number" min="0" name="engineMin">
+                    <label class="to-label">to</label>
+                    <input id="engineMin" type="number" min="0" name="engineMax">
+                </div> 
+            </div>
+            <div class="sleepingPlaces-div form-type">
+                <label class="attribute-name">Sleeping Places</label>
+                <div class="attribute-boundaries">
+                    <input id="sleepingPlacesMin" type="number" min="0" name="sleepingPlacesMin">
+                    <label class="to-label">to</label>
+                    <input id="sleepingPlacesMax" type="number" min="0" name="sleepingPlacesMax">
+                </div>
+            </div>
+            <div class="waterTankVolume-div form-type">
+                <label class="attribute-name">Water Tank Volume</label>
+                <div class="attribute-boundaries">
+                    <input id="waterTankVolumeMin" type="number" min="0" name="waterTankVolumeMin">
+                    <label class="to-label">to</label>
+                    <input id="waterTankVolumeMax" type="number" min="0" name="waterTankVolumeMax">
+                </div>
+            </div>
+            <div class="fuelTankVolume-div form-type">
+                <label class="attribute-name">Fuel Tank Volume</label>
+                <div class="attribute-boundaries">
+                    <input id="fuelTankVolumeMin" type="number" min="0" name="fuelTankVolumeMin">
+                    <label class="to-label">to</label>
+                    <input id="fuelTankVolumeMax" type="number" min="0" name="fuelTankVolumeMax">
+                </div>
+            </div>
+            <div class="totalSailingArea-div form-type">
+                <label class="attribute-name">Total Sailing Area</label>
+                <div class="attribute-boundaries">
+                    <input id="totalSailingAreaMin" type="number" min="0" name="totalSailingAreaMin">
+                    <label class="to-label">to</label>
+                    <input id="totalSailingAreaMax" type="number" min="0" name="totalSailingAreaMax">
+                </div>
+            </div>
+            <div class="genoa-div form-type">
+                <label class="attribute-name">Genoa</label>
+                <div class="attribute-boundaries">
+                    <input id="genoaMin" type="number" min="0" name="genoaMin">
+                    <label class="to-label">to</label>
+                    <input id="genoaMax" type="number" min="0" name="genoaMax">
+                </div>
+            </div>
+           
+            <input type="submit" value="Search" id="submit" class="form-type btn-download">
+        </form> 
+        </div>
+    </div>
+            <% items.forEach(function(item){ %>
+            <div class="container shadow-lg p-3 mb-5 bg-white rounded">
+                <div class="main-container">
+                <form action="get" method="post" class = "form-container">
+
+                    <div class=main-container>
+                        <div class="attribute-div-flex">
+                            <img src="<%= item.frontPhotoThumb %>">
+                            <img src="<%= item.sidePhotoThumb %>">
+                        </div>
+                        <input type="text" name="name" value="<%= item.name %>" readonly>
+                        <input type="submit" value="Details" id="submit" class="form-type">
+                    </div>
+                </form> 
+                </div>
+            </div>
+        <% }); %>
+    </center>
+</body>
+
+</html>
